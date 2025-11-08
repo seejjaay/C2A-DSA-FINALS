@@ -7,9 +7,11 @@ public class Main {
 
         DoublyLinkedList list = new DoublyLinkedList();
         
-        list.insert("Data1");
-        list.insert("Data2");
-        list.insert("Data2");
+        list.add("Data1");
+        list.add("Data2");
+        list.add("Data3");
+        list.add("Data4");
+        list.add("Data5");
         list.show();
     }
 }
