@@ -5,13 +5,24 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        DoublyLinkedList list = new DoublyLinkedList();
+        MusicPlayer list = new MusicPlayer();
         
-        list.add("Data1");
-        list.add("Data2");
-        list.add("Data3");
-        list.add("Data4");
-        list.add("Data5");
-        list.show();
+        
+        System.out.println("-- MUSIC PLAYER --");
+        while (true){
+            char c = list.chooseAction(scanner); scanner.nextLine();
+
+            switch (c){
+                case '1': {list.addMusic(scanner); break;}
+                case '2': {list.removeMusic(scanner); break;}
+                case '3': {list.show(); break;}
+                case '4': {list.playMusic(scanner); break;}
+                case '5': System.exit(0); break;
+                default: break;
+            }
+
+        }
     }
+
+    
 }
